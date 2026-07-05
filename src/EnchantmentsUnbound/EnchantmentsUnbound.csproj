@@ -12,8 +12,24 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Reference Include="BepInEx">
+            <HintPath>$(SulfurBepInExCoreDir)\BepInEx.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="0Harmony">
+            <HintPath>$(SulfurBepInExCoreDir)\0Harmony.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
         <Reference Include="Assembly-CSharp">
             <HintPath>$(SulfurManagedDir)\Assembly-CSharp.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="PerfectRandom.Sulfur.Core">
+            <HintPath>$(SulfurManagedDir)\PerfectRandom.Sulfur.Core.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="PerfectRandom.Sulfur.Gameplay">
+            <HintPath>$(SulfurManagedDir)\PerfectRandom.Sulfur.Gameplay.dll</HintPath>
             <Private>false</Private>
         </Reference>
         <Reference Include="UnityEngine">
@@ -25,4 +41,9 @@
             <Private>false</Private>
         </Reference>
     </ItemGroup>
+
+    <Target Name="DeployToGaleProfile" AfterTargets="Build" Condition="'$(DeployToSulfurProfile)' == 'true'">
+        <MakeDir Directories="$(SulfurBepInExPluginsDir)\EnchantmentsUnbound" />
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SulfurBepInExPluginsDir)\EnchantmentsUnbound" />
+    </Target>
 </Project>
