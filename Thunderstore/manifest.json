@@ -1,0 +1,9 @@
+{
+  "name": "Enchantments_Unbound",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/ryuka-dev/Enchantments-Unbound",
+  "description": "Removes SULFUR enchantment limits: repeat oils and scrolls, stack same-type enchantments, and keep unlocking slots past rank 5.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305"
+  ]
+}

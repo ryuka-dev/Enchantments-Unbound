@@ -44,6 +44,8 @@
 
     <Target Name="DeployToGaleProfile" AfterTargets="Build" Condition="'$(DeployToSulfurProfile)' == 'true'">
         <MakeDir Directories="$(SulfurBepInExPluginsDir)\EnchantmentsUnbound" />
+        <MakeDir Directories="$(ThunderstorePluginDir)" />
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SulfurBepInExPluginsDir)\EnchantmentsUnbound" />
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ThunderstorePluginDir)" />
     </Target>
 </Project>

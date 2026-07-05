@@ -5,5 +5,7 @@
         <SulfurGaleProfileDir Condition="'$(SulfurGaleProfileDir)' == ''">C:\Users\LingYun67\AppData\Roaming\com.kesomannen.gale\sulfur\profiles\&#x5176;&#x4ED6;mod&#x5F00;&#x53D1;</SulfurGaleProfileDir>
         <SulfurBepInExCoreDir Condition="'$(SulfurBepInExCoreDir)' == ''">$(SulfurGaleProfileDir)\BepInEx\core</SulfurBepInExCoreDir>
         <SulfurBepInExPluginsDir Condition="'$(SulfurBepInExPluginsDir)' == ''">$(SulfurGaleProfileDir)\BepInEx\plugins</SulfurBepInExPluginsDir>
+        <ThunderstoreDir Condition="'$(ThunderstoreDir)' == ''">$(MSBuildThisFileDirectory)Thunderstore</ThunderstoreDir>
+        <ThunderstorePluginDir Condition="'$(ThunderstorePluginDir)' == ''">$(ThunderstoreDir)\BepInEx\plugins\EnchantmentsUnbound</ThunderstorePluginDir>
     </PropertyGroup>
 </Project>

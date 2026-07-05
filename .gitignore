@@ -18,6 +18,11 @@ artifacts/
 /GameDlls/
 /References/
 
+# Release/build artifacts
+*.dll
+*.zip
+*.psd
+
 # Logs and temporary files
 *.log
 *.tmp
