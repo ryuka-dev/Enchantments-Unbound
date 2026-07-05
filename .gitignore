@@ -1,0 +1,26 @@
+# Build output
+bin/
+obj/
+build/
+artifacts/
+
+# IDE/user state
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.csproj.user
+
+# Local game/decompile caches
+/GameSource/*
+!/GameSource/.gitignore
+/GameDlls/
+/References/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.cache
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,6 @@
+<Project>
+    <PropertyGroup>
+        <SulfurGameDir Condition="'$(SulfurGameDir)' == ''">D:\SteamLibrary\steamapps\common\SULFUR</SulfurGameDir>
+        <SulfurManagedDir Condition="'$(SulfurManagedDir)' == ''">$(SulfurGameDir)\Sulfur_Data\Managed</SulfurManagedDir>
+    </PropertyGroup>
+</Project>
