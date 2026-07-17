@@ -32,6 +32,14 @@
             <HintPath>$(SulfurManagedDir)\PerfectRandom.Sulfur.Gameplay.dll</HintPath>
             <Private>false</Private>
         </Reference>
+        <Reference Include="Sonity.Public.Runtime">
+            <HintPath>$(SulfurManagedDir)\Sonity.Public.Runtime.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Sonity.Internal.Runtime">
+            <HintPath>$(SulfurManagedDir)\Sonity.Internal.Runtime.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
         <Reference Include="UnityEngine">
             <HintPath>$(SulfurManagedDir)\UnityEngine.dll</HintPath>
             <Private>false</Private>

@@ -8,6 +8,12 @@ Enchantments Unbound is a BepInEx mod for SULFUR that removes the game's enchant
 - Allows multiple enchantments of the same type to stack.
 - Allows weapons to keep ranking past level 5.
 - Keeps enchantment slots tied to weapon rank, so additional slots still require upgrading the weapon.
+- Configurable XP cost growth for ranks past 5 (`Progression.ExtendedRankXpGrowth`, default `1.5`). Ranks 1-5 always use the vanilla curve; `2.5` restores the vanilla-style compounding where high ranks need astronomical XP.
+
+## Compatibility
+
+- Targets SULFUR v0.18.x (verified against the v0.18.4 assemblies). v0.18.0 removed `UISounds.UI_Enchant`, so builds older than 0.2.0 play a wrong enchant sound on v0.18.x.
+- Compatible with Weapon XP multiplier mods: they scale the XP a weapon receives, this mod only decides how much XP each rank requires.
 
 ## Links
 

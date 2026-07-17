@@ -10,6 +10,12 @@ GitHub: https://github.com/ryuka-dev/Enchantments-Unbound
 - Allows multiple enchantments of the same type to stack.
 - Allows weapons to keep ranking past level 5.
 - Keeps enchantment slots tied to weapon rank, so more slots still require upgrading the weapon.
+- Configurable XP cost growth for ranks past 5 (`Progression.ExtendedRankXpGrowth`, default `1.5`). The vanilla-style `2.5` compounding made ranks beyond ~8 need astronomical XP; ranks 1-5 always match vanilla.
+
+## Compatibility
+
+- Built for SULFUR v0.18.x (verified against v0.18.4).
+- Works with Weapon XP multiplier mods: they multiply the XP a weapon receives, this mod only decides how much XP each rank requires.
 
 ## Installation
 

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using HarmonyLib;
 using PerfectRandom.Sulfur.Core;
+using PerfectRandom.Sulfur.Core.Audio;
 using PerfectRandom.Sulfur.Core.CharacterStats;
 using PerfectRandom.Sulfur.Core.Items;
 using PerfectRandom.Sulfur.Core.Stats;
@@ -64,7 +65,7 @@ namespace EnchantmentsUnbound.Patches
 
             if (announce)
             {
-                StaticInstance<SoundBankUI>.Instance.PlayClip(UISounds.UI_Enchant);
+                StaticInstance<SoundBank>.Instance.soundUiWeaponOilEnchant.UIPlay();
             }
             __instance.SyncWithInstancedVersion();
             return false;
@@ -77,8 +78,15 @@ namespace EnchantmentsUnbound.Patches
                 return 0f;
             }
 
+            // Vanilla thresholds are 50 * 2.5^(rank-1) and stop at rank 5.
+            // Past rank 5 the per-rank XP requirement grows by a configurable
+            // factor instead, because compounding 2.5x makes high ranks
+            // practically unreachable (rank 10 -> 11 alone would need ~286k XP).
             const float firstRankExperience = 50f;
-            const float rankExperienceMultiplier = 2.5f;
+            const float vanillaRankMultiplier = 2.5f;
+            const int vanillaMaxRank = 5;
+
+            float extendedGrowth = Plugin.GetExtendedRankXpGrowth();
             float currentThreshold = 0f;
             float nextThreshold = firstRankExperience;
             int rank = 0;
@@ -86,8 +94,16 @@ namespace EnchantmentsUnbound.Patches
             while (experience >= nextThreshold && rank < 200)
             {
                 rank++;
+                float previousStep = nextThreshold - currentThreshold;
                 currentThreshold = nextThreshold;
-                nextThreshold *= rankExperienceMultiplier;
+                if (rank < vanillaMaxRank)
+                {
+                    nextThreshold = currentThreshold * vanillaRankMultiplier;
+                }
+                else
+                {
+                    nextThreshold = currentThreshold + previousStep * extendedGrowth;
+                }
             }
 
             if (nextThreshold <= currentThreshold)
