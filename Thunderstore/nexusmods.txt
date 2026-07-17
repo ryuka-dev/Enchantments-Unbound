@@ -1,0 +1,56 @@
+[color=DarkOrange][b]Enchantments Unbound[/b][/color]
+
+Removes SULFUR's enchantment limits while keeping the game's native upgrade flow.
+
+GitHub: https://github.com/ryuka-dev/Enchantments-Unbound
+
+[color=RoyalBlue][b]Features[/b][/color]
+
+[list]
+[*]Allows repeated oils and scrolls on the same weapon.[/*]
+[*]Allows multiple enchantments of the same type to stack.[/*]
+[*]Allows weapons to keep ranking past level 5.[/*]
+[*]Keeps enchantment slots tied to weapon rank, so more slots still require upgrading the weapon.[/*]
+[*]Configurable XP cost growth for ranks past 5 ([color=#ffff00]Progression.ExtendedRankXpGrowth[/color], default [color=#ffff00]1.5[/color]). The vanilla-style [color=#ffff00]2.5[/color] compounding made ranks beyond ~8 need astronomical XP; ranks 1-5 always match vanilla.[/*]
+[/list]
+[color=RoyalBlue][b]Compatibility[/b][/color]
+
+[list]
+[*]Built for SULFUR v0.18.x (verified against v0.18.4).[/*]
+[*]Works with Weapon XP multiplier mods: they multiply the XP a weapon receives, this mod only decides how much XP each rank requires.[/*]
+[/list]
+[color=RoyalBlue][b]Installation[/b][/color]
+
+Install with a Thunderstore-compatible mod manager such as Gale.
+
+[color=RoyalBlue][b]Manual Installation[/b][/color]
+
+[list=1]
+[*]Install BepInEx for SULFUR.[/*]
+[*]Download and extract this mod.[/*]
+[*]Copy [color=#ffff00]EnchantmentsUnbound.dll[/color] into your SULFUR [color=#ffff00]BepInEx/plugins/EnchantmentsUnbound/[/color] folder.[/*]
+[*]Start the game.[/*]
+[/list]
+[color=RoyalBlue][b]Feedback[/b][/color]
+
+Thunderstore does not provide package comments. Please report issues or leave feedback on GitHub or Nexus Mods.
+
+GitHub: https://github.com/ryuka-dev/Enchantments-Unbound
+
+[color=DarkOrange][b]Changelog[/b][/color]
+
+[color=RoyalBlue][b]0.2.0[/b][/color]
+
+[list]
+[*]Updated for SULFUR v0.18.x (verified against v0.18.4). The enchant sound now uses the game's new audio path; the old build played a wrong sound on 0.18.x.[/*]
+[*]Reworked the XP curve past rank 5. The old curve kept multiplying each rank's XP requirement by 2.5x, so ranks beyond ~8 needed hundreds of thousands of XP and progress effectively stalled (also reported when combined with XP multiplier mods). Ranks 1-5 still match vanilla exactly.[/*]
+[*]New config [color=#ffff00]Progression.ExtendedRankXpGrowth[/color] (default [color=#ffff00]1.5[/color]): how much more XP each rank past 5 costs compared to the previous rank. Set [color=#ffff00]2.5[/color] to restore the old runaway curve, [color=#ffff00]1.0[/color] for a flat cost per rank.[/*]
+[*]Existing weapons are safe: the change only reinterprets stored XP, and the gentler curve can only raise a weapon's rank, never lower it.[/*]
+[/list]
+[color=RoyalBlue][b]0.1.0[/b][/color]
+
+[list]
+[*]Initial release.[/*]
+[*]Removed duplicate oil and scroll restrictions.[/*]
+[*]Removed the weapon rank 5 cap for enchantment slot progression.[/*]
+[/list]

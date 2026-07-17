@@ -6,6 +6,5 @@
         <SulfurBepInExCoreDir Condition="'$(SulfurBepInExCoreDir)' == ''">$(SulfurGaleProfileDir)\BepInEx\core</SulfurBepInExCoreDir>
         <SulfurBepInExPluginsDir Condition="'$(SulfurBepInExPluginsDir)' == ''">$(SulfurGaleProfileDir)\BepInEx\plugins</SulfurBepInExPluginsDir>
         <ThunderstoreDir Condition="'$(ThunderstoreDir)' == ''">$(MSBuildThisFileDirectory)Thunderstore</ThunderstoreDir>
-        <ThunderstorePluginDir Condition="'$(ThunderstorePluginDir)' == ''">$(ThunderstoreDir)\BepInEx\plugins\EnchantmentsUnbound</ThunderstorePluginDir>
     </PropertyGroup>
 </Project>

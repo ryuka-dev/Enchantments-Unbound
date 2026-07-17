@@ -36,7 +36,7 @@ Build the mod:
 dotnet build
 ```
 
-Deploy to the configured Gale profile and copy a release DLL into `Thunderstore/BepInEx/plugins/EnchantmentsUnbound/`:
+Deploy to the configured Gale profile and copy a release DLL into `Thunderstore/`:
 
 ```powershell
 dotnet build -p:DeployToSulfurProfile=true
@@ -56,12 +56,14 @@ dotnet build -p:SulfurManagedDir="D:\Path\To\SULFUR\Sulfur_Data\Managed"
 
 ## Thunderstore
 
-Release metadata lives in `Thunderstore/`.
+Release metadata lives in `Thunderstore/`. The folder is flat: its content (minus `nexusmods.txt` and generated archives) is exactly the release zip.
 
 The release DLL is copied to:
 
 ```text
-Thunderstore/BepInEx/plugins/EnchantmentsUnbound/EnchantmentsUnbound.dll
+Thunderstore/EnchantmentsUnbound.dll
 ```
+
+`Thunderstore/nexusmods.txt` is the generated NexusMods BBCode description (README + CHANGELOG); it is committed but never packaged.
 
 The DLL itself is generated output and is not committed.
